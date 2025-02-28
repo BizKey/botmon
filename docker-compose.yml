@@ -1,0 +1,11 @@
+services:
+  botmon:
+    image: kizyanov/botmon:latest
+    build: .
+    container_name: botmon
+    tty: true
+    restart: always
+    ports:
+      - "8050:8050"
+    env_file:
+      - .env
